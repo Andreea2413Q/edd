@@ -1,4 +1,3 @@
-cat > netlify.toml << 'EOF'
 [build]
   publish = "build"
   command = "npm install --legacy-peer-deps && CI=false npm run build"
@@ -10,4 +9,3 @@ cat > netlify.toml << 'EOF'
   from = "/*"
   to = "/index.html"
   status = 200
-EOF
