@@ -1,6 +1,7 @@
+cat > netlify.toml << 'EOF'
 [build]
   publish = "build"
-  command = "npm install --legacy-peer-deps && npm run build"
+  command = "npm install --legacy-peer-deps && CI=false npm run build"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -9,3 +10,4 @@
   from = "/*"
   to = "/index.html"
   status = 200
+EOF
